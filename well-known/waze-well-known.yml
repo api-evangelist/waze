@@ -1,0 +1,21 @@
+generated: '2026-07-21'
+method: searched
+host: https://www.waze.com
+note: >-
+  waze.com serves no Waze-specific /.well-known discovery documents. The only
+  present document is security.txt, which 301-redirects to Google's shared
+  corporate security.txt (waze.com is a Google property). Parsed contact/policy
+  values are captured in security/waze-vulnerability-disclosure.yml.
+documents:
+- path: /.well-known/security.txt
+  status: 301
+  redirects_to: https://www.google.com/.well-known/security.txt
+  effective_status: 200
+- path: /.well-known/openid-configuration
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404

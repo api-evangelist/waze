@@ -1,0 +1,28 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.google.com/waze
+summary:
+  types: [none, partner-provisioned]
+  note: >-
+    Waze exposes no self-service, key-based public API. Access splits into two
+    models: (1) open, unauthenticated URL/embed surfaces; (2) partner-gated
+    programs provisioned through the Waze Partner Hub after a partnership is
+    approved.
+schemes:
+- name: PublicUrlSurfaces
+  type: none
+  applies_to:
+  - Waze Deep Links (https://waze.com/ul, waze://)
+  - Waze iFrame / Live Map (https://embed.waze.com/iframe)
+  auth: No authentication or API key required.
+- name: WazePartnerHub
+  type: partner-provisioned
+  applies_to:
+  - Waze for Cities Data Feeds (partner uploads a feed URL; Waze returns a
+    partner-specific JSON alerts feed)
+  - Waze Transport SDK (SDK download gated behind an approved partnership)
+  - Waze Audio Kit
+  auth: >-
+    Requires an approved Waze partnership; credentials/feed URLs are issued and
+    managed through the Waze Partner Hub, not via a public developer console.
+  docs: https://support.google.com/waze/partners

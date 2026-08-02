@@ -1,0 +1,53 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.google.com/waze/deeplinks
+summary: >-
+  Waze's public developer surface is not a JSON REST API but a set of
+  URL-invocation and embed contracts (Deep Links, iFrame Live Map) plus
+  partner-gated feeds (Waze for Cities Data Feeds) and SDKs (Transport SDK,
+  Audio Kit). The cross-cutting conventions below describe how the public
+  URL/embed surfaces behave.
+authentication:
+  public_surfaces: none
+  note: >-
+    Deep Links (https://waze.com/ul, waze://) and the iFrame Live Map
+    (https://embed.waze.com/iframe) require no authentication or API key.
+    Partner surfaces (Data Feeds, Transport SDK, Audio Kit) are gated behind a
+    Waze partnership and provisioned through the Waze Partner Hub rather than by
+    self-service API keys.
+  see: authentication/waze-authentication.yml
+invocation:
+  style: url-scheme
+  methods: [GET]
+  deep_link_base_urls:
+  - https://waze.com/ul
+  - waze://
+  iframe_base_url: https://embed.waze.com/iframe
+parameters:
+  encoding: query-string
+  coordinate_format: 'll=<latitude>,<longitude>  (comma-separated, URL-encoded)'
+  boolean_values: "true|t|false|f"
+  search_terms: 'q=<url-encoded address or place>'
+  localization: >-
+    iFrame supports a language code in the URL path segment, e.g.
+    https://embed.waze.com/fr/iframe
+pagination:
+  supported: false
+  note: URL-invocation and embed surfaces return no paginated collections.
+idempotency:
+  supported: false
+  note: >-
+    Deep Links are stateless URL launchers (naturally repeatable) but expose no
+    Idempotency-Key contract; no idempotency header is documented.
+versioning:
+  scheme: none-documented
+  note: The Deep Links and iFrame URL contracts are unversioned.
+error_envelope:
+  note: >-
+    Public URL/embed surfaces do not return a structured JSON error envelope;
+    malformed parameters are handled client-side by the Waze app or Live Map.
+rate_limiting:
+  note: No published rate-limit signaling for the public URL/embed surfaces.
+cross_links:
+  authentication: authentication/waze-authentication.yml
+  components: components/waze-components.yml

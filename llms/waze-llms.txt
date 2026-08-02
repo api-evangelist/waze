@@ -1,0 +1,27 @@
+# Waze
+
+> Waze is a Google-owned community-driven navigation and real-time traffic app. Its developer surface is not a self-service JSON REST API but a set of URL-invocation and embed contracts (Deep Links, iFrame Live Map) plus partner-gated programs (Waze for Cities Data Feeds, Transport SDK, Audio Kit) provisioned through the Waze Partner Hub. Documentation is hosted on Google for Developers at developers.google.com/waze.
+
+## Developer products
+
+- [Waze Deep Links](https://developers.google.com/waze/deeplinks): Open the Waze app from a URL to locate an address, drop a pin, or start navigation. Base URLs https://waze.com/ul and waze://; params include ll (lat,lon), q (search), navigate, z (zoom), favorite, and avoid_* / vehicle_type routing options. No auth.
+- [Waze iFrame (Live Map)](https://developers.google.com/waze/iframe): Embed the interactive Waze Live Map in a web page via <iframe> at https://embed.waze.com/iframe with zoom, lat, lon, pin, desc params. No auth.
+- [Waze for Cities Data Feeds](https://developers.google.com/waze/data-feed/overview): Partner feeds for road closures, incidents, and working vehicles using CIFS (preferred), WZDx, DATEX II, or ESRI; Waze returns a partner-specific JSON alerts feed. Provisioned via Waze Partner Hub.
+- [Waze Transport SDK](https://developers.google.com/waze/intro-transport): Partner-gated SDK for transportation apps to add ETA/routing and trip-data collection using Waze real-time traffic data.
+- [Waze Audio Kit](https://developers.google.com/waze/intro-audio): Partner program to surface music, podcasts, news, and audiobooks inside Waze.
+
+## Repository artifacts
+
+- [Deep Link & embed conventions](https://raw.githubusercontent.com/api-evangelist/waze/refs/heads/main/conventions/waze-conventions.yml)
+- [Embeddable components (iFrame Live Map)](https://raw.githubusercontent.com/api-evangelist/waze/refs/heads/main/components/waze-components.yml)
+- [Authentication model](https://raw.githubusercontent.com/api-evangelist/waze/refs/heads/main/authentication/waze-authentication.yml)
+- [Domain security probe](https://raw.githubusercontent.com/api-evangelist/waze/refs/heads/main/security/waze-domain-security.yml)
+- [Vulnerability disclosure](https://raw.githubusercontent.com/api-evangelist/waze/refs/heads/main/security/waze-vulnerability-disclosure.yml)
+
+## Docs & community
+
+- [Waze for Developers](https://developers.google.com/waze)
+- [Waze for Cities](https://www.waze.com/wazeforcities/)
+- [Waze Partners Help](https://support.google.com/waze/partners)
+- [Waze Blog](https://blog.waze.com/)
+- [Waze Discuss / Community](https://www.waze.com/discuss/)

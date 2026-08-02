@@ -1,7 +1,31 @@
 aid: waze
+accessModel:
+  pricing: unknown
+  onboarding: approval
+  trial: false
+  try_now: false
+  public: false
+  label: Requires approval
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/waze.png
 name: Waze
-description: 'Waze is a company surfaced as a portfolio company of bond-capital and added to the API Evangelist
-  network as a stub for enrichment. Sector: mobility. This profile is a lead awaiting the enrichment pipeline.'
+description: >-
+  Waze is a Google-owned, community-driven navigation and real-time traffic
+  application. Its developer surface is not a self-service JSON REST API but a
+  set of public URL-invocation and embed contracts plus partner-gated data and
+  SDK programs. Waze Deep Links open the Waze app from a URL to locate an
+  address, drop a pin, or start turn-by-turn navigation; the Waze iFrame embeds
+  the interactive Live Map in any web page; Waze for Cities Data Feeds let
+  agencies exchange road-closure, incident, and working-vehicle data (CIFS,
+  WZDx, DATEX II, ESRI) and receive a partner-specific JSON alerts feed; the
+  Waze Transport SDK gives transportation apps ETA/routing and trip-data
+  collection; and the Waze Audio Kit surfaces audio content in-drive. Developer
+  documentation is hosted on Google for Developers at developers.google.com/waze
+  and partner programs are provisioned through the Waze Partner Hub.
 url: https://raw.githubusercontent.com/api-evangelist/waze/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,11 +35,71 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Mobility
-apis: []
+- Navigation
+- Maps
+- Traffic
+- Location
+- Transportation
+- Smart Cities
+apis:
+- name: Waze Deep Links
+  description: >-
+    URL-invocation API to open the Waze app from an external link to locate an
+    address, drop a pin, or start navigation. Query params include ll (lat,lon),
+    q (search), navigate, z (zoom), favorite, and avoid_* / vehicle_type routing
+    options. No authentication required.
+  humanURL: https://developers.google.com/waze/deeplinks
+  baseURL: https://waze.com/ul
+  tags:
+  - Navigation
+  - Deep Links
+  properties:
+  - type: Documentation
+    url: https://developers.google.com/waze/deeplinks
+- name: Waze iFrame (Live Map)
+  description: >-
+    Embeddable client-side component that renders the interactive Waze Live Map
+    inside a web page via an <iframe>, with zoom, lat, lon, pin, and desc
+    parameters. No authentication required.
+  humanURL: https://developers.google.com/waze/iframe
+  baseURL: https://embed.waze.com/iframe
+  tags:
+  - Maps
+  - Embed
+  properties:
+  - type: Documentation
+    url: https://developers.google.com/waze/iframe
+  - type: Components
+    url: components/waze-components.yml
+- name: Waze for Cities Data Feeds
+  description: >-
+    Partner data-exchange for road closures, incidents, and working vehicles
+    using CIFS (preferred), WZDx, DATEX II, or ESRI formats; Waze returns a
+    partner-specific JSON alerts feed. Provisioned through the Waze Partner Hub.
+  humanURL: https://developers.google.com/waze/data-feed/overview
+  baseURL: https://developers.google.com/waze/data-feed/overview
+  tags:
+  - Traffic
+  - Smart Cities
+  properties:
+  - type: Documentation
+    url: https://developers.google.com/waze/data-feed/overview
+- name: Waze Transport SDK
+  description: >-
+    Partner-gated SDK for transportation apps to add ETA and routing points and
+    trip-data collection using Waze real-time traffic and location data.
+  humanURL: https://developers.google.com/waze/intro-transport
+  baseURL: https://developers.google.com/waze/intro-transport
+  tags:
+  - Transportation
+  - SDK
+  properties:
+  - type: Documentation
+    url: https://developers.google.com/waze/intro-transport
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -24,3 +108,42 @@ maintainers:
 common:
 - type: Website
   url: https://waze.com
+- type: DeveloperPortal
+  url: https://developers.google.com/waze
+- type: Documentation
+  url: https://developers.google.com/waze
+- type: GettingStarted
+  url: https://developers.google.com/waze/deeplinks
+- type: Support
+  url: https://support.google.com/waze/partners
+- type: Community
+  url: https://www.waze.com/discuss/
+- type: Blog
+  url: https://blog.waze.com/
+- type: TermsOfService
+  url: https://www.waze.com/en/legal/tos
+- type: PrivacyPolicy
+  url: https://www.waze.com/en/legal/privacy
+- type: Authentication
+  url: authentication/waze-authentication.yml
+- type: Conventions
+  url: conventions/waze-conventions.yml
+- type: Components
+  url: components/waze-components.yml
+- type: DomainSecurity
+  url: security/waze-domain-security.yml
+- type: VulnerabilityDisclosure
+  url: security/waze-vulnerability-disclosure.yml
+- type: Security
+  url: security/waze-vulnerability-disclosure.yml
+- type: WellKnown
+  url: well-known/waze-well-known.yml
+- type: SecurityTxt
+  url: well-known/waze-well-known.yml
+- type: LLMsTxt
+  url: llms/waze-llms.txt
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 7
+  pass: local-v1

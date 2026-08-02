@@ -1,0 +1,34 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.google.com/waze/iframe
+summary: >-
+  Waze publishes one first-party embeddable client-side component: the Waze
+  iFrame (Live Map), which renders the interactive Waze map inside any web page
+  via an <iframe>. Distinct from server-side SDKs.
+components:
+- family: Live Map
+  name: Waze iFrame
+  kind: iframe-embed
+  docs: https://developers.google.com/waze/iframe
+  base_url: https://embed.waze.com/iframe
+  loader: HTML <iframe> element (no JavaScript library required)
+  localization: 'language code as a path segment, e.g. https://embed.waze.com/fr/iframe'
+  parameters:
+  - name: zoom
+    required: true
+    description: Magnification level of the map when opened (range 3-17).
+  - name: lat
+    required: true
+    description: Latitude of the map center point.
+  - name: lon
+    required: true
+    description: Longitude of the map center point.
+  - name: pin
+    required: false
+    description: Set to 1 to place a pin at the center of the map.
+  - name: desc
+    required: false
+    description: Set to any value to display a descriptive text block in the Live Map.
+  example: >-
+    <iframe src="https://embed.waze.com/iframe?zoom=12&lat=45.6906304&lon=-120.810983"
+    width="300" height="400"></iframe>
