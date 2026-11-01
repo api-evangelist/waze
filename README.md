@@ -64,6 +64,94 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Waze is a company surfaced as a portfolio company of bond-capital and added to the API Evangelist network as a stub for enrichment. Sector: mobility. This profile is a lead awaiting the enrichment pipeline.
+Waze is a Google-owned, community-driven navigation and real-time traffic application. Its developer surface is not a self-service JSON REST API but a set of public URL-invocation and embed contracts plus partner-gated data and SDK programs. Waze Deep Links open the Waze app from a URL to locate an address, drop a pin, or start turn-by-turn navigation; the Waze iFrame embeds the interactive Live Map in any web page; Waze for Cities Data Feeds let agencies exchange road-closure, incident, and working-vehicle data (CIFS, WZDx, DATEX II, ESRI) and receive a partner-specific JSON alerts feed; the Waze Transport SDK gives transportation apps ETA/routing and trip-data collection; and the Waze Audio Kit surfaces audio content in-drive. Developer documentation is hosted on Google for Developers at developers.google.com/waze and partner programs are provisioned through the Waze Partner Hub.
 
-Backed by: bond-capital — https://waze.com
+**Areas:** Company · Mobility · Navigation · Maps · Traffic · Location · Transportation · Smart Cities
+
+## Waze on APIs.io
+
+Everything profiled for Waze is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/waze/](https://apis.io/providers/waze/)** — or go straight to one of the APIs or properties below.
+
+### APIs (4)
+
+- [Waze Deep Links](https://apis.io/apis/waze/waze-deep-links/) — URL-invocation API to open the Waze app from an external link to locate an address, drop a pin, or start navigation. Query params include ll (lat,lon), q…
+- [Waze iFrame (Live Map)](https://apis.io/apis/waze/waze-iframe-live-map/) — Embeddable client-side component that renders the interactive Waze Live Map inside a web page via an <iframe>, with zoom, lat, lon, pin, and desc…
+- [Waze for Cities Data Feeds](https://apis.io/apis/waze/waze-for-cities-data-feeds/) — Partner data-exchange for road closures, incidents, and working vehicles using CIFS (preferred), WZDx, DATEX II, or ESRI formats; Waze returns a…
+- [Waze Transport SDK](https://apis.io/apis/waze/waze-transport-sdk/) — Partner-gated SDK for transportation apps to add ETA and routing points and trip-data collection using Waze real-time traffic and location data.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Waze Authentication](https://apis.io/security/waze/waze-authentication/)
+- [Waze Domain Security](https://apis.io/security/waze/waze-domain-security/)
+- [Waze Vulnerability Disclosure](https://apis.io/security/waze/waze-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://waze.com)
+- [Documentation](https://developers.google.com/waze)
+- [Getting started](https://developers.google.com/waze/deeplinks)
+- [Support](https://support.google.com/waze/partners)
+- [Blog](https://blog.waze.com/)
+- [Terms of service](https://www.waze.com/en/legal/tos)
+- [Privacy policy](https://www.waze.com/en/legal/privacy)
+
+## API Evangelist rating
+
+**Kin Score 24.0** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 78.6 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 45.2 |
+| Access clarity | 21.1 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 25.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/waze/](https://apis.io/providers/waze/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Waze: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/waze/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
